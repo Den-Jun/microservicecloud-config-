@@ -1,0 +1,34 @@
+spring:
+  profiles:
+    active:
+      - dev #默认开发环境
+#开发环境
+---
+server:
+  port: 7001
+spring:
+  profiles: dev
+  application:
+    name: microservicecloud-config-eureka-client
+eureka:
+  instance:
+    hostname: eureka7001.com #eureka的主页访问地址
+  client:
+    register-with-eureka: false #不把自己注册进去
+    fetch-registry: false #不通过eureka获取注册信息
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+#测试环境
+---
+spring:
+  profiles: test
+  application:
+    name: microservicecloud-config-eureka-client
+eureka:
+  instance:
+    hostname: eureka7001.com:7001
+  client:
+    register-with-eureka: false #不把直接注册进eureka中
+    fetch-registry: false #不从eureka中获取注册信息
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
