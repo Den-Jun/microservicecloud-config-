@@ -35,6 +35,7 @@ eureka:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/ #注册进那个微服务
   instance:
+    instance-id: config-dept-client-dev
     prefer-ip-address: true #显示IP地址
 
 #测试环境
