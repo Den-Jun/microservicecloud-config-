@@ -29,6 +29,14 @@ mybatis:
   type-aliases-package: pojo
   mapper-locations:
     - classpath:mybatis/mapper/**/*.xml
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/ #注册进那个微服务
+  instance:
+    prefer-ip-address: true #显示IP地址
+
 #测试环境
 ---
 server:
@@ -53,3 +61,10 @@ mybatis:
   type-aliases-package: pojo
   mapper-locations:
     - classpath:mybatis/mapper/**/*.xml
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7002.com:7001/eureka/
+  instance:
+    instance-id: config-dept-client-text
+    prefer-ip-address: true
