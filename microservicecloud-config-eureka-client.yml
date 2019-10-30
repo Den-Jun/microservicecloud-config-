@@ -28,7 +28,7 @@ spring:
     name: microservicecloud-config-eureka-client
 eureka:
   instance:
-    hostname: eureka7001.com
+    hostname: eureka7002.com
   client:
     register-with-eureka: false #不把直接注册进eureka中
     fetch-registry: false #不从eureka中获取注册信息
