@@ -29,9 +29,10 @@ mybatis:
   type-aliases-package: pojo
   mapper-locations:
     - classpath:mybatis/mapper/**/*.xml
+#测试环境
 ---
 server:
-  port: 8001
+  port: 8004
 spring:
   profiles: test
   application:
