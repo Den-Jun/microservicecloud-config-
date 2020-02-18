@@ -6,7 +6,7 @@ spring:
 spring:
   profiles: dev
   application:
-    name: -dev
+    name: -dev1
 ---
 spring:
   profiles: test
